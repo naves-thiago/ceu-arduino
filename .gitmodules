@@ -1,0 +1,3 @@
+[submodule "ceu"]
+	path = ceu
+	url = git@github.com:naves-thiago/ceu.git

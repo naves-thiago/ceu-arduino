@@ -40,7 +40,7 @@ c:
 			   --port $(PORT) --upload $(INO)
 
 ceu:
-	ceu $(CEU) --out-c _ceu_app.c.h
+	../ceu/ceu $(CEU) --out-c _ceu_app.c.h
 
 clean:
 	rm -Rf /tmp/build*
@@ -49,10 +49,10 @@ clean:
 ### SIM ###
 sim: sim-ceu ino _all
 sim-ceu:
-	ceu --timemachine --cpp-args "-I . -DCEUFILE=$(CEUFILE)" sim.ceu --out-c _ceu_app.src
+	../ceu/ceu --timemachine --cpp-args "-I . -DCEUFILE=$(CEUFILE)" sim.ceu --out-c _ceu_app.src
 sim-tst: sim-tst-ceu ino _all
 sim-tst-ceu:
-	ceu --timemachine --cpp-args "-I ." sim-tst.ceu --out-c _ceu_app.src
+	../ceu/ceu --timemachine --cpp-args "-I ." sim-tst.ceu --out-c _ceu_app.src
 ###
 
 #CPPFLAGS += -Wno-pointer-arith -Wno-unused-label
