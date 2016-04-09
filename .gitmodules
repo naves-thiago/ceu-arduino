@@ -1,3 +1,6 @@
 [submodule "ceu"]
 	path = ceu
 	url = git@github.com:naves-thiago/ceu.git
+[submodule "ChibiOS-Arduino"]
+	path = ChibiOS-Arduino
+	url = https://github.com/greiman/ChibiOS-Arduino.git

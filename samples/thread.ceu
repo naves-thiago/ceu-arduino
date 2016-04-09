@@ -1,0 +1,10 @@
+output int PIN13;
+
+async/thread do
+	loop do
+		_digitalWrite(13, 1);
+	    _delay(500);
+		_digitalWrite(13, 0);
+	    _delay(500);
+	end
+end
