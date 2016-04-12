@@ -1,10 +1,10 @@
+#include <ChibiOS_AVR.h>
 //#define POLLING_INTERVAL 30    // in milliseconds
 
 void __ceu_dummy_to_arduino_include_headers (void);
     /* HACK: any function prototype suffices for the Arduino build system to
      *       include appropriate headers. */
 
-#include <ChibiOS_AVR.h>
 #include "common.h"
 #include "_ceu_app.h"
 
