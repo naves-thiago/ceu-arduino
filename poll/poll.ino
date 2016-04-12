@@ -40,7 +40,7 @@ int _ceu_arduino_V;
 byte CEU_DATA[sizeof(CEU_Main)];
 tceu_app CEU_APP;
 
-void setup ()
+void chSetup()
 {
 #ifdef CEU_IN_PIN00
     pinMode( 0, INPUT);
@@ -137,6 +137,11 @@ void setup ()
 #ifdef CEU_IN_START
     ceu_sys_go(&CEU_APP, CEU_IN_START, NULL);
 #endif
+}
+
+void setup ()
+{
+    chBegin(chSetup);
 }
 
 void loop()
